@@ -69,6 +69,7 @@ class Student
       FROM students
       WHERE name
       IS ?
+      LIMIT 1
     SQL
 
     DB[:conn].execute(sql,name).map do |row|

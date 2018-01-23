@@ -71,7 +71,7 @@ class Student
       IS ?
     SQL
 
-    result = DB[:conn].execute(sql, name)[0]
+    result = DB[:conn].execute(sql, name)
     result.new_from_db
 
   end

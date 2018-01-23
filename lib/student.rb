@@ -56,11 +56,11 @@ class Student
     new_student.save
   end
 
-  def self.new_from_db(new_student)
-    student = Student.new
-    student.id = self.id
-    student.name = self.name
-    student.grade = self.grade    
+  def self.new_from_db(student_array)
+    new_student.id = student_array[0]
+    new_student.name = student_array[1]
+    new_student.grade = student_array[3]
+    new_student.save
   end
 
 end
